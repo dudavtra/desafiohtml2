@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urso-Pardo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>O Urso-Pardo</h1>
+    </header>
+
+    <main>
+        <section class="conteudo">
+            <h2>Sobre a Espécie</h2>
+            <p>O urso-pardo (<em>Ursus arctos</em>) é um dos maiores mamíferos carnívoros terrestres do mundo. Eles são conhecidos por sua grande força, pelagem densa e hábitos solitários.</p>
+        </section>
+
+        <section class="galeria">
+            <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=800" alt="Urso-pardo na natureza">
+        </section>
+    </main>
+</body>
+</html>
