@@ -1,117 +1,86 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Estilização Geral e Fundo Marrom Pastel */
 body {
-    background-color: #c8a2c8;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+  background-color: #d7ccc8; /* Marrom pastel */
+  color: #3e2723; /* Marrom escuro para o texto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
+.container {
+  max-width: 800px;
+  background-color: #efebe9; /* Marrom pastel bem claro para o card */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 5px;
+h1, h2 {
+  text-align: center;
+  color: #4e342e;
 }
 
-.subtitulo {
-    font-size: 1.2rem;
-    font-style: italic;
+.img-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
-nav {
-    margin: 20px 0;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.info-section {
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-nav a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 16px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
+/* Interatividade: Botões e Seções Ocultas */
+.btn {
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 10px auto;
 }
 
-nav a:hover {
-    background-color: #000000;
-    color: #c8a2c8;
+.btn:hover {
+  background-color: #6d4c41;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
+.fact-box {
+  display: none;
+  background-color: #d7ccc8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-.destaque {
-    text-align: center;
-    margin-bottom: 30px;
+/* Interatividade: Quiz */
+.quiz-option {
+  background-color: #bcaaa4;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.destaque img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid #000000;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.quiz-option:hover {
+  background-color: #a1887f;
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #000000;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 5px;
-}
-
-.card ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    border: 1px solid #000000;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 15px;
-    border-top: 1px solid #000000;
-    font-size: 0.9rem;
+#quiz-result {
+  font-weight: bold;
+  margin-top: 10px;
 }

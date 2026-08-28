@@ -1,59 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo dos Ursos-Pardos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="foto-card">
-                    <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&q=80&w=800" alt="Urso-pardo pescando salmão no rio">
-                    <p>Urso-pardo pescando no rio.</p>
-                </div>
-            </div>
-        </section>
+<div class="container">
+  <h1>O Fascinante Urso-Pardo (Ursus arctos)</h1>
 
-        <section id="subespecies" class="card">
-            <h2>Principais Subespécies</h2>
-            <ul>
-                <li><strong>Urso-Grizzly (<em>Ursus arctos horribilis</em>):</strong> Encontrado na América do Norte, conhecido por sua força e garras longas.</li>
-                <li><strong>Urso-de-Kodiak (<em>Ursus arctos middendorffi</em>):</strong> Uma das maiores subespécies, nativa do arquipélago Kodiak no Alasca.</li>
-                <li><strong>Urso-pardo-eurasiático (<em>Ursus arctos arctos</em>):</strong> Presente na Europa e Ásia, com porte ligeiramente menor.</li>
-            </ul>
-        </section>
+  <div class="img-container">
+    <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80" alt="Urso Pardo na natureza">
+  </div>
 
-        <section id="dieta" class="card">
-            <h2>Alimentação Adaptável</h2>
-            <p>Apesar de classificados na ordem Carnivora, os ursos-pardos são onívoros operacionais. Sua dieta varia drasticamente de acordo com a estação do ano:</p>
-            <ul>
-                <li><strong>Primavera:</strong> Brotos, raízes, carcaças e insetos.</li>
-                <li><strong>Verão:</strong> Peixes (como o salmão) e pequenos mamíferos.</li>
-                <li><strong>Outono:</strong> Frutas silvestres, nozes e sementes para acumular gordura pré-hibernação.</li>
-            </ul>
-        </section>
+  <div class="info-section">
+    <b>Sobre a Espécie</b>
+    <p>O urso-pardo é um dos maiores carnívoros terrestres do planeta. Eles são encontrados nas florestas e montanhas da América do Norte, Europa e Ásia. Apesar do nome, a cor de sua pelagem pode variar desde o bege claro até tons quase pretos.</p>
+  </div>
 
-        <section id="dados" class="card">
-            <h2>Fatos Rápidos</h2>
-            <div class="tabela-dados">
-                <table>
-                    <tr>
-                        <th>Peso Médio</th>
-                        <td>150 kg a 600 kg (varia por subespécie)</td>
-                    </tr>
-                    <tr>
-                        <th>Expectativa de Vida</th>
-                        <td>20 a 30 anos na natureza</td>
-                    </tr>
-                    <tr>
-                        <th>Velocidade Máxima</th>
-                        <td>Até 48 km/h em tiros curtos</td>
-                    </tr>
-                    <tr>
-                        <th>Status de Conservação</th>
-                        <td>Pouco Preocupante (IUCN)</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+  <div class="info-section">
+    <b>Características Físicas e Dieta</b>
+    <ul>
+      <li><b>Peso:</b> Podem pesar entre 180 kg e 600 kg dependendo da subespécie e época do ano.</li>
+      <li><b>Alimentação:</b> São onívoros opportunistas. Comem peixes (como salmão), bagas, raízes, insetos e pequenos peixes ou mamíferos.</li>
+      <li><b>Jorrom de Músculo:</b> Possuem uma grande elevação de músculos nos ombros que lhes dá força extra para cavar.</li>
+    </ul>
+  </div>
 
-    </main>
+  <hr>
 
-    <footer class="footer">
-        <p>&copy; 2026 Santuário do Urso-Pardo. Conteúdo educativo e de preservação ambiental.</p>
-    </footer>
+  <!-- Interatividade 1: Fatos Ocultos -->
+  <div class="info-section">
+    <h2>Descubra Mais!</h2>
+    <button class="btn" onclick="toggleFact('fact1')">Como eles passam o inverno?</button>
+    <div id="fact1" class="fact-box">
+      Durante o outono, os ursos-pardos comem em grande quantidade para acumular gordura. No inverno, eles entram em um estado de hibernação/torpor que pode durar até 7 meses, onde os batimentos cardíacos e a respiração diminuem drasticamente.
+    </div>
 
+    <button class="btn" onclick="toggleFact('fact2')">Qual a velocidade de um Urso-Pardo?</button>
+    <div id="fact2" class="fact-box">
+      Apesar de parecerem pesados e lentos, ursos-pardos conseguem correr a até 50 km/h em distâncias curtas!
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Interatividade 2: Quiz -->
+  <div class="info-section" style="text-align: center;">
+    <h2>Mini Quiz do Urso</h2>
+    <p>Qual é o alimento favorito do urso-pardo durante a desova nos rios?</p>
+    <button class="quiz-option" onclick="checkAnswer(false)">Maçãs</button>
+    <button class="quiz-option" onclick="checkAnswer(true)">Salmão</button>
+    <button class="quiz-option" onclick="checkAnswer(false)">Mel puro</button>
+    
+    <p id="quiz-result"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
