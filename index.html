@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,19 +8,20 @@
 </head>
 <body>
 
-  <!-- Elementos flutuantes de fundo -->
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
 
   <main class="container">
     
     <header class="header">
-      <span class="badge">Ursus arctos • O Gigante Cósmico</span>
+      <div class="top-bar">
+        <span class="badge">Ursus arctos • O Gigante Cósmico</span>
+        <button id="contrast-btn" class="btn-contrast" onclick="toggleContrast()">👁️ Alto Contraste</button>
+      </div>
       <h1>O Reino Onírico do Urso-Pardo</h1>
       <p class="subtitle">Uma jornada profunda pela biologia, misticismo e segredos dos maiores predadores terrestres.</p>
     </header>
 
-    <!-- Imagem Surreal com Efeito -->
     <section class="image-wrapper">
       <div class="img-frame">
         <img id="main-bear-img" src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1000&q=80" alt="Urso Pardo Surrealista">
@@ -29,10 +29,8 @@
           <p id="image-caption">O Guardião entre o Rio e a Névoa</p>
         </div>
       </div>
-      <button class="btn-magic" onclick="transformImage()">🌀 Mutação Visio-Surreal</button>
     </section>
 
-    <!-- Guia de Informações Detalhadas -->
     <section class="grid-sections">
       
       <article class="card">
@@ -57,7 +55,6 @@
 
     </section>
 
-    <!-- Seção de Revelações Interativas (Abas/Cards Expansíveis) -->
     <section class="interactive-realm">
       <h2>🔮 Os Segredos Ocultos da Espécie</h2>
       <p class="section-desc">Clique nos portais abaixo para revelar dados avançados sobre o titã das florestas.</p>
@@ -81,56 +78,4 @@
         </div>
 
         <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>⚡ A Velocidade Fantasma</span>
-            <span class="icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Apesar de seu porte colossal, o urso-pardo quebra as leis da percepção visual. Ele pode atingir impressionantes <b>55 km/h</b> em terreno plano ou em aclives acentuados. Isso supera a velocidade de qualquer velocista olímpico humano.</p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>🐟 A Alquimia Nutricional</span>
-            <span class="icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Na época da desova do salmão, os ursos consomem exclusivamente a pele, o cérebro e as ovas dos peixes — as partes mais ricas em gordura —, descartando o restante para fertilizar o solo da floresta com nitrogênio pura.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Quiz Interativo Avançado -->
-    <section class="quiz-container">
-      <h2>🧪 Teste da Consciência Ursa</h2>
-      <p id="quiz-question">Pergunta 1: Qual habilidade surreal o urso realiza durante a hibernação?</p>
-
-      <div class="quiz-options" id="quiz-options">
-        <button class="quiz-btn" onclick="answerQuiz(0)">Ele continua caçando durante o sono profundo.</button>
-        <button class="quiz-btn" onclick="answerQuiz(1)">Recicla a própria ureia para não perder massa muscular.</button>
-        <button class="quiz-btn" onclick="answerQuiz(2)">Sua temperatura corporal cai a zero grau congelando o sangue.</button>
-      </div>
-
-      <div id="quiz-feedback" class="quiz-feedback"></div>
-    </section>
-
-    <!-- Gerador Surreal de Pensamentos do Urso -->
-    <section class="oracle-section">
-      <h3>✨ O Oráculo do Urso</h3>
-      <p>Consulte a sabedoria ancestral das florestas profundas.</p>
-      <button class="btn-oracle" onclick="generateOracle()">Invocar Pensamento Ancestral</button>
-      <blockquote id="oracle-text">"O silêncio das cavernas guarda a memória das estrelas..."</blockquote>
-    </section>
-
-    <footer>
-      <p>Enciclopédia Surrealista • Construída em tons de Marrom Pastel & Misticismo Nativo</p>
-    </footer>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+          <button class="accordion-header" onclick="toggleAccordion(this
