@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +9,7 @@
 </head>
 <body>
 
+  <!-- Elementos flutuantes de fundo -->
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
 
@@ -22,6 +24,7 @@
       <p class="subtitle">Uma jornada profunda pela biologia, misticismo e segredos dos maiores predadores terrestres.</p>
     </header>
 
+    <!-- Imagem Surreal com Efeito -->
     <section class="image-wrapper">
       <div class="img-frame">
         <img id="main-bear-img" src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1000&q=80" alt="Urso Pardo Surrealista">
@@ -31,6 +34,7 @@
       </div>
     </section>
 
+    <!-- Guia de Informações Detalhadas -->
     <section class="grid-sections">
       
       <article class="card">
@@ -55,6 +59,7 @@
 
     </section>
 
+    <!-- Seção de Revelações Interativas (Abas Expansíveis) -->
     <section class="interactive-realm">
       <h2>🔮 Os Segredos Ocultos da Espécie</h2>
       <p class="section-desc">Clique nos portais abaixo para revelar dados avançados sobre o titã das florestas.</p>
@@ -62,7 +67,7 @@
       <div class="accordion">
         
         <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
+          <button type="button" class="accordion-header" onclick="toggleAccordion(this)">
             <span>🌲 Subespécies do Planeta</span>
             <span class="icon">+</span>
           </button>
@@ -78,4 +83,34 @@
         </div>
 
         <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this
+          <button type="button" class="accordion-header" onclick="toggleAccordion(this)">
+            <span>⚡ A Velocidade Fantasma</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Apesar de seu porte colossal, o urso-pardo quebra as leis da percepção visual. Ele pode atingir impressionantes <b>55 km/h</b> em terreno plano ou em aclives acentuados. Isso supera a velocidade de qualquer velocista olímpico humano.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" onclick="toggleAccordion(this)">
+            <span>🐟 A Alquimia Nutricional</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Na época da desova do salmão, os ursos consomem exclusivamente a pele, o cérebro e as ovas dos peixes — as partes mais ricas em gordura —, descartando o restante para fertilizar o solo da floresta com nitrogênio puro.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>Enciclopédia Surrealista • Construída em tons de Marrom Pastel & Misticismo Nativo</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

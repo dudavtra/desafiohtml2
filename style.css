@@ -1,3 +1,4 @@
+
 :root {
   --bg-main: #d7ccc8;
   --bg-card: #efebe9;
@@ -91,7 +92,7 @@ body {
   cursor: pointer;
   font-size: 0.85rem;
   font-weight: bold;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .btn-contrast:hover {
@@ -224,6 +225,91 @@ img {
   justify-content: space-between;
   align-items: center;
   font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: rgba(141, 110, 99, 0.15);
 }
 
 .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  background: #e0d4d1;
+}
+
+.accordion-content p, .accordion-content ul {
+  padding: 15px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .orb {
+  display: none;
+}
+
+body.high-contrast .container {
+  background-color: #000000 !important;
+  border: 3px solid #ffff00 !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast b {
+  color: #ffff00 !important;
+}
+
+body.high-contrast .subtitle,
+body.high-contrast .section-desc,
+body.high-contrast footer p {
+  color: #ffffff !important;
+}
+
+body.high-contrast .badge {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+body.high-contrast .btn-contrast {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.high-contrast .card,
+body.high-contrast .accordion-item {
+  background-color: #111111 !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.high-contrast .accordion-header {
+  color: #ffff00 !important;
+}
+
+body.high-contrast .accordion-header:hover {
+  background-color: #222222 !important;
+}
+
+body.high-contrast .accordion-content {
+  background-color: #222222 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .data-list li::before {
+  color: #ffff00 !important;
+}
