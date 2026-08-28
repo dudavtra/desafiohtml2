@@ -1,82 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo Sobre o Urso-Pardo</title>
+    <title>Santuário do Urso-Pardo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>O Mundo do Urso-Pardo</h1>
-        <p class="subtitulo">Conheça o gigante das florestas</p>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>O Imperador das Florestas</h1>
+            <p>Descubra a força, o habitat e a rotina do <em>Ursus arctos</em></p>
+            <a href="#sobre" class="btn-hero">Explorar Espécie</a>
+        </div>
     </header>
 
-    <nav>
+    <nav class="nav-bar">
         <ul>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#habitat">Habitat</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#subespecies">Subespécies</a></li>
             <li><a href="#dieta">Alimentação</a></li>
-            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#dados">Fatos</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section class="destaque">
-            <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=800" alt="Urso-pardo na natureza">
-        </section>
+    <main class="container">
 
         <section id="sobre" class="card">
-            <h2>Sobre a Espécie</h2>
-            <p>O urso-pardo (<em>Ursus arctos</em>) é um dos maiores mamíferos carnívoros terrestres do planeta. Apesar do nome, a cor de sua pelagem pode variar do marrom-claro ao quase preto, apresentando muitas vezes pontas prateadas nas costas.</p>
+            <span class="tag">Visão Geral</span>
+            <h2>O Gigante Onívoro</h2>
+            <p>O urso-pardo (<em>Ursus arctos</em>) é um dos maiores carnívoros terrestres do planeta. Famosos pela corcova pronunciada em seus ombros — composta por uma poderosa musculatura usada para escavar —, esses mamíferos dominam os ecossistemas do hemisfério norte com inteligência e grande capacidade de adaptação.</p>
         </section>
 
-        <section id="habitat" class="card">
-            <h2>Habitat e Distribuição</h2>
-            <p>Eles são encontrados nas florestas e montanhas da América do Norte, Europa e Ásia. São animais extremamente adaptáveis, mas preferem áreas densas e isoladas da presença humana.</p>
-        </section>
-
-        <section id="dieta" class="card">
-            <h2>Alimentação Onívora</h2>
-            <p>Embora pertençam à ordem dos carnívoros, os ursos-pardos são onívoros. A dieta deles varia conforme a estação:</p>
-            <ul>
-                <li><strong>Primavera:</strong> Brotos, gramíneas e raízes.</li>
-                <li><strong>Verão:</strong> Frutas vermelhas, insetos e peixes (especialmente salmão).</li>
-                <li><strong>Outono:</strong> Nozes e sementes para acumular gordura antes da hibernação.</li>
-            </ul>
-        </section>
-
-        <section id="curiosidades" class="card">
-            <h2>Fatos Interessantes</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Característica</th>
-                        <th scope="col">Dados</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Peso Médio</td>
-                        <td>180 kg a 600 kg</td>
-                    </tr>
-                    <tr>
-                        <td>Expectativa de Vida</td>
-                        <td>20 a 30 anos na natureza</td>
-                    </tr>
-                    <tr>
-                        <td>Velocidade Máxima</td>
-                        <td>Até 50 km/h em curtas distâncias</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-    <footer>
-        <p>Projeto sobre a vida selvagem do Urso-Pardo &copy; 2026</p>
-    </footer>
-
-</body>
-</html>
+        <section id="galeria" class="card">
+            <h2>Galeria Interativa</h2>
+            <div class="grid-galeria">
+                <div class="foto-card">
+                    <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=800" alt="Urso-pardo caminhando na floresta">
+                    <p>Urso-pardo em seu ambiente natural.</p>
+                </div>
+                <div class="foto-
