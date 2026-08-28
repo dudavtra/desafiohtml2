@@ -1,64 +1,136 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mundo dos Ursos-Pardos</title>
+  <title>O Enigma do Urso-Pardo | Enciclopédia Surrealista</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h1>O Fascinante Urso-Pardo (Ursus arctos)</h1>
+  <!-- Elementos flutuantes de fundo -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
 
-  <div class="img-container">
-    <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80" alt="Urso Pardo na natureza">
-  </div>
-
-  <div class="info-section">
-    <b>Sobre a Espécie</b>
-    <p>O urso-pardo é um dos maiores carnívoros terrestres do planeta. Eles são encontrados nas florestas e montanhas da América do Norte, Europa e Ásia. Apesar do nome, a cor de sua pelagem pode variar desde o bege claro até tons quase pretos.</p>
-  </div>
-
-  <div class="info-section">
-    <b>Características Físicas e Dieta</b>
-    <ul>
-      <li><b>Peso:</b> Podem pesar entre 180 kg e 600 kg dependendo da subespécie e época do ano.</li>
-      <li><b>Alimentação:</b> São onívoros opportunistas. Comem peixes (como salmão), bagas, raízes, insetos e pequenos peixes ou mamíferos.</li>
-      <li><b>Jorrom de Músculo:</b> Possuem uma grande elevação de músculos nos ombros que lhes dá força extra para cavar.</li>
-    </ul>
-  </div>
-
-  <hr>
-
-  <!-- Interatividade 1: Fatos Ocultos -->
-  <div class="info-section">
-    <h2>Descubra Mais!</h2>
-    <button class="btn" onclick="toggleFact('fact1')">Como eles passam o inverno?</button>
-    <div id="fact1" class="fact-box">
-      Durante o outono, os ursos-pardos comem em grande quantidade para acumular gordura. No inverno, eles entram em um estado de hibernação/torpor que pode durar até 7 meses, onde os batimentos cardíacos e a respiração diminuem drasticamente.
-    </div>
-
-    <button class="btn" onclick="toggleFact('fact2')">Qual a velocidade de um Urso-Pardo?</button>
-    <div id="fact2" class="fact-box">
-      Apesar de parecerem pesados e lentos, ursos-pardos conseguem correr a até 50 km/h em distâncias curtas!
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Interatividade 2: Quiz -->
-  <div class="info-section" style="text-align: center;">
-    <h2>Mini Quiz do Urso</h2>
-    <p>Qual é o alimento favorito do urso-pardo durante a desova nos rios?</p>
-    <button class="quiz-option" onclick="checkAnswer(false)">Maçãs</button>
-    <button class="quiz-option" onclick="checkAnswer(true)">Salmão</button>
-    <button class="quiz-option" onclick="checkAnswer(false)">Mel puro</button>
+  <main class="container">
     
-    <p id="quiz-result"></p>
-  </div>
-</div>
+    <header class="header">
+      <span class="badge">Ursus arctos • O Gigante Cósmico</span>
+      <h1>O Reino Onírico do Urso-Pardo</h1>
+      <p class="subtitle">Uma jornada profunda pela biologia, misticismo e segredos dos maiores predadores terrestres.</p>
+    </header>
 
-<script src="script.js"></script>
+    <!-- Imagem Surreal com Efeito -->
+    <section class="image-wrapper">
+      <div class="img-frame">
+        <img id="main-bear-img" src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1000&q=80" alt="Urso Pardo Surrealista">
+        <div class="img-overlay">
+          <p id="image-caption">O Guardião entre o Rio e a Névoa</p>
+        </div>
+      </div>
+      <button class="btn-magic" onclick="transformImage()">🌀 Mutação Visio-Surreal</button>
+    </section>
+
+    <!-- Guia de Informações Detalhadas -->
+    <section class="grid-sections">
+      
+      <article class="card">
+        <h3>🏛️ Anatomia & Fisiologia Impossível</h3>
+        <p>O <i>Ursus arctos</i> carrega uma corcunda muscular massiva sobre os ombros — não de gordura, mas de puro tecido motor que o permite escavar toneladas de terra ou despedaçar troncos em segundos.</p>
+        <ul class="data-list">
+          <li><b>Massa Corporal:</b> Varia de 130 kg a incríveis 680 kg (subespécie Kodiak).</li>
+          <li><b>Força de Mordida:</b> 1.200 PSI — suficiente para esmagar uma bola de boliche.</li>
+          <li><b>Garras:</b> Medem até 10 cm, comparáveis às garras de um tigre-de-bengala.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>🌌 O Transe da Hibernação</h3>
+        <p>Durante o inverno, o urso-pardo entra em um estado liminar entre a vida e o sono profano. Ele não urina nem defeca por até 7 meses, reciclando sua própria ureia em proteína muscular.</p>
+        <ul class="data-list">
+          <li><b>Batimento Cardíaco:</b> Cai de 80 para apenas 8 batimentos por minuto.</li>
+          <li><b>Temperatura:</b> Diminui sem romper as funções celulares vitais.</li>
+          <li><b>Perda de Peso:</b> Consome até 40% de sua massa corporal total.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- Seção de Revelações Interativas (Abas/Cards Expansíveis) -->
+    <section class="interactive-realm">
+      <h2>🔮 Os Segredos Ocultos da Espécie</h2>
+      <p class="section-desc">Clique nos portais abaixo para revelar dados avançados sobre o titã das florestas.</p>
+
+      <div class="accordion">
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>🌲 Subespécies do Planeta</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>O urso-pardo divide-se em diversas linhagens impressionantes pelo mundo:</p>
+            <ul>
+              <li><b>Urso-Grizzly (América do Norte):</b> Conhecido pelas pontas prateadas em seu pelo.</li>
+              <li><b>Urso-de-Kodiak (Alasca):</b> O maior de todos, isolado no arquipélago Kodiak há 12 mil anos.</li>
+              <li><b>Urso-Pardo-Sírio:</b> O menor e de pelagem amarelada bastante clara.</li>
+              <li><b>Urso-de-Marsican (Itália):</b> Criticamente ameaçado, vive em perfeita simbiose nas montanhas dos Apeninos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>⚡ A Velocidade Fantasma</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Apesar de seu porte colossal, o urso-pardo quebra as leis da percepção visual. Ele pode atingir impressionantes <b>55 km/h</b> em terreno plano ou em aclives acentuados. Isso supera a velocidade de qualquer velocista olímpico humano.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>🐟 A Alquimia Nutricional</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Na época da desova do salmão, os ursos consomem exclusivamente a pele, o cérebro e as ovas dos peixes — as partes mais ricas em gordura —, descartando o restante para fertilizar o solo da floresta com nitrogênio pura.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quiz Interativo Avançado -->
+    <section class="quiz-container">
+      <h2>🧪 Teste da Consciência Ursa</h2>
+      <p id="quiz-question">Pergunta 1: Qual habilidade surreal o urso realiza durante a hibernação?</p>
+
+      <div class="quiz-options" id="quiz-options">
+        <button class="quiz-btn" onclick="answerQuiz(0)">Ele continua caçando durante o sono profundo.</button>
+        <button class="quiz-btn" onclick="answerQuiz(1)">Recicla a própria ureia para não perder massa muscular.</button>
+        <button class="quiz-btn" onclick="answerQuiz(2)">Sua temperatura corporal cai a zero grau congelando o sangue.</button>
+      </div>
+
+      <div id="quiz-feedback" class="quiz-feedback"></div>
+    </section>
+
+    <!-- Gerador Surreal de Pensamentos do Urso -->
+    <section class="oracle-section">
+      <h3>✨ O Oráculo do Urso</h3>
+      <p>Consulte a sabedoria ancestral das florestas profundas.</p>
+      <button class="btn-oracle" onclick="generateOracle()">Invocar Pensamento Ancestral</button>
+      <blockquote id="oracle-text">"O silêncio das cavernas guarda a memória das estrelas..."</blockquote>
+    </section>
+
+    <footer>
+      <p>Enciclopédia Surrealista • Construída em tons de Marrom Pastel & Misticismo Nativo</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
