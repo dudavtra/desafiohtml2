@@ -1,40 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Função global para acionar o modo Alto Contraste via HTML
+function toggleContrast() {
+  const body = document.body;
   const contrastBtn = document.getElementById('contrast-btn');
 
-  if (contrastBtn) {
-    contrastBtn.addEventListener('click', () => {
-      document.body.classList.toggle('high-contrast');
+  body.classList.toggle('high-contrast');
 
-      if (document.body.classList.contains('high-contrast')) {
-        contrastBtn.textContent = '☀️ Modo Normal';
-      } else {
-        contrastBtn.textContent = '👁️ Alto Contraste';
-      }
-    });
+  if (body.classList.contains('high-contrast')) {
+    contrastBtn.textContent = '☀️ Modo Normal';
+  } else {
+    contrastBtn.textContent = '👁️ Alto Contraste';
   }
-});
+}
 
-// Função para abrir e fechar o acordeão
+// Função global para gerenciar a abertura das abas do Acordeão
 function toggleAccordion(button) {
   const content = button.nextElementSibling;
   const icon = button.querySelector('.icon');
-  const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+  const isCurrentlyOpen = content.classList.contains('open');
 
-  // Fecha todas as abas
+  // Fecha todas as abas ativas
   document.querySelectorAll('.accordion-content').forEach(item => {
+    item.classList.remove('open');
     item.style.maxHeight = "0px";
-    item.style.paddingTop = "0px";
-    item.style.paddingBottom = "0px";
     if (item.previousElementSibling) {
       const otherIcon = item.previousElementSibling.querySelector('.icon');
       if (otherIcon) otherIcon.textContent = "+";
     }
   });
 
-  // Abre a aba clicada se ela estava fechada
-  if (!isOpen) {
-    content.style.paddingTop = "15px";
-    content.style.paddingBottom = "15px";
+  // Se a aba clicada não estava aberta, abre ela agora
+  if (!isCurrentlyOpen) {
+    content.classList.add('open');
     content.style.maxHeight = (content.scrollHeight + 30) + "px";
     icon.textContent = "−";
   }
