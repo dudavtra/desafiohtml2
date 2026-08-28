@@ -1,40 +1,87 @@
 
-// Alternar o modo Alto Contraste
-function toggleContrast() {
-  const body = document.body;
-  const contrastBtn = document.getElementById('contrast-btn');
+// 1. Efeito 3D Tilt na imagem ao mover o mouse
+const tiltCard = document.getElementById('tilt-card');
+document.addEventListener('mousemove', (e) => {
+  const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+  const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+  tiltCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
 
-  body.classList.toggle('high-contrast');
-
-  if (body.classList.contains('high-contrast')) {
-    contrastBtn.textContent = '☀️ Modo Normal';
+// 2. Modo Surreal (Alto Contraste)
+function toggleSurrealMode() {
+  document.body.classList.toggle('surreal-mode');
+  const btn = document.getElementById('contrast-btn');
+  if (document.body.classList.contains('surreal-mode')) {
+    btn.textContent = '☀️ Voltar ao Plano Normal';
   } else {
-    contrastBtn.textContent = '👁️ Alto Contraste';
+    btn.textContent = '👁️ Alterar Realidade';
   }
 }
 
-// Alternar as abas do Acordeão
+// 3. Acordeão Interativo
 function toggleAccordion(button) {
   const content = button.nextElementSibling;
-  const icon = button.querySelector('.icon');
-  const isCurrentlyOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+  const isOpen = content.classList.contains('open');
 
-  // Fecha todas as abas abertas
   document.querySelectorAll('.accordion-content').forEach(item => {
-    item.style.maxHeight = "0px";
-    item.style.paddingTop = "0px";
-    item.style.paddingBottom = "0px";
-    if (item.previousElementSibling) {
-      const otherIcon = item.previousElementSibling.querySelector('.icon');
-      if (otherIcon) otherIcon.textContent = "+";
-    }
+    item.classList.remove('open');
   });
 
-  // Se a aba não estava aberta, abre agora
-  if (!isCurrentlyOpen) {
-    content.style.paddingTop = "15px";
-    content.style.paddingBottom = "15px";
-    content.style.maxHeight = (content.scrollHeight + 30) + "px";
-    icon.textContent = "−";
+  if (!isOpen) {
+    content.classList.add('open');
   }
 }
+
+// 4. Canvas Interativo de Fundo (Rastro de partículas no cursor)
+const canvas = document.getElementById('canvas-bg');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 5 + 1;
+    this.speedX = Math.random() * 3 - 1.5;
+    this.speedY = Math.random() * 3 - 1.5;
+    this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.size > 0.2) this.size -= 0.05;
+  }
+  draw() {
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+window.addEventListener('mousemove', (e) => {
+  for (let i = 0; i < 2; i++) {
+    particles.push(new Particle(e.x, e.y));
+  }
+});
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particles.length; i++) {
+    particles[i].update();
+    particles[i].draw();
+    if (particles[i].size <= 0.2) {
+      particles.splice(i, 1);
+      i--;
+    }
+  }
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
