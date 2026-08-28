@@ -1,4 +1,5 @@
-// Função global para acionar o modo Alto Contraste via HTML
+
+// Alternar o modo Alto Contraste
 function toggleContrast() {
   const body = document.body;
   const contrastBtn = document.getElementById('contrast-btn');
@@ -12,25 +13,27 @@ function toggleContrast() {
   }
 }
 
-// Função global para gerenciar a abertura das abas do Acordeão
+// Alternar as abas do Acordeão
 function toggleAccordion(button) {
   const content = button.nextElementSibling;
   const icon = button.querySelector('.icon');
-  const isCurrentlyOpen = content.classList.contains('open');
+  const isCurrentlyOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
 
-  // Fecha todas as abas ativas
+  // Fecha todas as abas abertas
   document.querySelectorAll('.accordion-content').forEach(item => {
-    item.classList.remove('open');
     item.style.maxHeight = "0px";
+    item.style.paddingTop = "0px";
+    item.style.paddingBottom = "0px";
     if (item.previousElementSibling) {
       const otherIcon = item.previousElementSibling.querySelector('.icon');
       if (otherIcon) otherIcon.textContent = "+";
     }
   });
 
-  // Se a aba clicada não estava aberta, abre ela agora
+  // Se a aba não estava aberta, abre agora
   if (!isCurrentlyOpen) {
-    content.classList.add('open');
+    content.style.paddingTop = "15px";
+    content.style.paddingBottom = "15px";
     content.style.maxHeight = (content.scrollHeight + 30) + "px";
     icon.textContent = "−";
   }
