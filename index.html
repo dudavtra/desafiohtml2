@@ -16,7 +16,8 @@
     <header class="header">
       <div class="top-bar">
         <span class="badge">Ursus arctos • O Gigante Cósmico</span>
-        <button id="contrast-btn" class="btn-contrast" onclick="toggleContrast()">👁️ Alto Contraste</button>
+        <!-- Botão corrigido: sem onclick direto, controlado inteiramente pelo script.js via ID -->
+        <button id="contrast-btn" class="btn-contrast">👁️ Alto Contraste</button>
       </div>
       <h1>O Reino Onírico do Urso-Pardo</h1>
       <p class="subtitle">Uma jornada profunda pela biologia, misticismo e segredos dos maiores predadores terrestres.</p>
@@ -102,6 +103,7 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <!-- O atributo defer garante que o script carregue após o botão existir no HTML -->
+  <script src="script.js" defer></script>
 </body>
 </html>
